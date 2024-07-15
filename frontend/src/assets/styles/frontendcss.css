@@ -1,0 +1,64 @@
+.span-button {
+  display: inline-block;
+}
+
+.span-button {
+  background-image: linear-gradient(to bottom, #83f787, #3e8e41);
+  color: #ffffff; /* White */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.span-button:hover {
+  background-image: linear-gradient(to bottom, #3e8e41, #86ee8b);
+}
+
+.enquiry-row {
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.user-profile {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 50%;
+}
+
+.luffy-button {
+  display: inline-block;
+}
+
+.luffy-button {
+  background-image: linear-gradient(to bottom, #f081c1, #b0a6eb);
+  color: #080707; /* White */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.luffy-button:hover {
+  background-image: linear-gradient(to bottom, #cae078, #f38181);
+}
+
+.admin-button {
+  display: inline-block;
+}
+
+.admin-button {
+  background-image: linear-gradient(to bottom, #1f201f, #7fa387);
+  color: #fdfbfb; /* White */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.admin-button:hover {
+  background-image: linear-gradient(to bottom, #f09218, #aca359);
+}
