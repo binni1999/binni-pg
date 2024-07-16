@@ -54,8 +54,6 @@ exports.deleteUser = asyncHandler(async (req, res) => {
 
 exports.updateUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
-    console.log(req.body);
-
     if (user) {
         user.name = req.body.name || user.name;
         user.email = req.body.email || user.email;
@@ -111,9 +109,6 @@ exports.getEnquiryById = asyncHandler(async (req, res) => {
 
 exports.updateEnquiry = asyncHandler(async (req, res) => {
     const response = req.body.response;
-    console.log(req.body);
-
-    console.log('response is ', response);
 
     const enquiry = await Enquiry.findById(req.params.id);
 

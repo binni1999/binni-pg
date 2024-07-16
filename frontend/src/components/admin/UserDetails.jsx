@@ -43,7 +43,7 @@ const UserDetails = () => {
     };
     try {
       const res = await updateUserDetails(data).unwrap();
-      console.log(res);
+      //console.log(res);
       toast.success("User Details Updated!", {
         autoClose: 1000,
       });

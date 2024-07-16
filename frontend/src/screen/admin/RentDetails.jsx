@@ -20,8 +20,8 @@ const RentDetails = () => {
     isLoading: userLoading,
     error: userError,
   } = useGetAllUsersQuery({ keyword, pageNumber });
-  console.log(users);
-  console.log(rentDetails);
+  //console.log(users);
+  // console.log(rentDetails);
 
   return (
     <Container>

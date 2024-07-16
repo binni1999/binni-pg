@@ -25,7 +25,7 @@ const UserTestimony = () => {
     isLoading,
     error,
   } = useGetTestimonyQuery();
-  console.log(userTestimony);
+  // console.log(userTestimony);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 

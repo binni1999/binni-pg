@@ -24,7 +24,7 @@ const RentPaidDetailsForUser = () => {
   useEffect(() => {
     if (!pdfLoading && rentSlipsPdf) {
       setRentSlips(rentSlipsPdf);
-      console.log("rent slips", rentSlips);
+      //console.log("rent slips", rentSlips);
     }
   }, [rentSlipsPdf, pdfLoading, pdfRefetch, rentSlips]);
 

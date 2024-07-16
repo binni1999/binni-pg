@@ -36,7 +36,7 @@ const ForgotPassword = () => {
 
     try {
       const result = await resetPassword({ data });
-      console.log(result);
+      //console.log(result);
       if (result?.data) {
         toast.success("Password reset successfully");
         navigate("/login");

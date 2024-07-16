@@ -16,7 +16,7 @@ const UsersList = () => {
     pageNumber,
     keyword,
   });
-  console.log(data);
+  //console.log(data);
   return (
     <>
       <Meta title={"Users"} />

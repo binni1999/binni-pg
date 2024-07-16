@@ -32,7 +32,7 @@ const GalleryAdmin = () => {
     e.preventDefault();
     try {
       const result = await addNewImage({ image });
-      console.log(result);
+      //console.log(result);
       toast.success("Image Added Successfully");
       handleClose();
       refetch();

@@ -64,15 +64,15 @@ const UserProfileScreen = () => {
       permanentAddress,
       profilePic,
     };
-    console.log("updated user", updatedUser);
+    //console.log("updated user", updatedUser);
     const result = await updateUserProfile(updatedUser);
-    console.log(result);
+    //console.log(result);
     if (result.error) {
       toast.error(result.error);
     } else {
       toast.success("Profile Updated");
       const updatedData = result.data;
-      console.log("updated data", updatedData);
+      //console.log("updated data", updatedData);
 
       dispatch(setCredentials({ ...updatedData }));
       setProfilePic(result.data.profilePic);
@@ -94,7 +94,7 @@ const UserProfileScreen = () => {
 
     try {
       const res = await uploadUserProfile(formData);
-      console.log(res);
+      // console.log(res);
       if (res?.data?.profilePic) {
         setProfilePic(res.data.profilePic);
       }
@@ -118,7 +118,7 @@ const UserProfileScreen = () => {
     };
     try {
       const result = await updateUserPassword(data);
-      console.log(result);
+      //console.log(result);
       if (result?.data?.message) {
         toast.success(result.data.message);
       }

@@ -37,7 +37,7 @@ const PayRent = () => {
     isLoading,
     error,
   } = useGetUserRentDetailsQuery(userInfo._id);
-  console.log(rentDetails);
+  //console.log(rentDetails);
 
   const {
     data: rentSlipsPdf,
@@ -52,14 +52,14 @@ const PayRent = () => {
         rentDetails[0]?.electricity +
         (rentDetails[0]?.rentAmount + rentDetails[0]?.electricity) * 0.06;
       setRentAmount(totalAmount);
-      console.log(rentAmount);
+      //console.log(rentAmount);
     }
   }, [rentDetails, isLoading, rentAmount]);
 
   useEffect(() => {
     if (!pdfLoading) {
       setRentSlips(rentSlipsPdf);
-      console.log("rent slips", rentSlips);
+      //console.log("rent slips", rentSlips);
     }
   }, [rentSlipsPdf, pdfLoading, pdfRefetch, rentSlips]);
 
@@ -86,11 +86,11 @@ const PayRent = () => {
         }
       );
       const order = orderResponse.data;
-      console.log(order);
+      //console.log(order);
       handlePaymentVerify(order.data);
       refetch();
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
   const handlePaymentVerify = async (data) => {
@@ -102,7 +102,7 @@ const PayRent = () => {
       description: "Test Transaction",
       order_id: data.id,
       handler: async (response) => {
-        console.log("response", response);
+        //console.log("response", response);
         try {
           const result = await axios.post(
             `${BASE_URL}/api/razorpay/verify-payment`,
@@ -114,7 +114,7 @@ const PayRent = () => {
             }
           );
           const verifyData = result.data;
-          console.log(verifyData);
+          //console.log(verifyData);
           if (verifyData.message) {
             toast.success(verifyData.message);
           }

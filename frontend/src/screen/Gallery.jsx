@@ -8,7 +8,7 @@ import Meta from "../components/Meta";
 
 const Gallery = () => {
   const { data: images, isLoading, error } = useGetAllImagesQuery();
-  console.log(images);
+  //console.log(images);
   return (
     <>
       <Meta title={"Gallery"} />

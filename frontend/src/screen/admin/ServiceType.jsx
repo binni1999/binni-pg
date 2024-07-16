@@ -45,7 +45,7 @@ const ServiceType = () => {
         caption,
         image: serviceImage,
       });
-      console.log(result);
+      //console.log(result);
       toast.success("Service Type Added Successfully");
       handleClose();
       refetch();

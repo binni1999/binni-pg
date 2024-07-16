@@ -31,7 +31,7 @@ const RoomType = () => {
   const [caption, setCaption] = useState("");
 
   const { data: rooms, refetch, isLoading, error } = useGetRoomsQuery();
-  console.log(rooms);
+  //console.log(rooms);
   const [uploadRoomImage] = useUploadRoomImageMutation();
   const [addRoomType] = useAddRoomTypeMutation();
   const [deleteRoomType] = useDeleteRoomMutation();
@@ -39,7 +39,7 @@ const RoomType = () => {
     e.preventDefault();
     try {
       const result = await addRoomType({ caption, image: roomImage });
-      console.log(result);
+      //console.log(result);
       toast.success("Room Type Added Successfully");
       handleClose();
       setCaption("");

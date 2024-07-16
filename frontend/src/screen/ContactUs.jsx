@@ -16,7 +16,7 @@ const ContactUs = () => {
   const [createEnquiry] = useCreateEnquiryMutation();
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(name, email, message, contact);
+    //console.log(name, email, message, contact);
     try {
       await createEnquiry({ name, email, contact, message });
       toast.success("Enquiry sent successfully");

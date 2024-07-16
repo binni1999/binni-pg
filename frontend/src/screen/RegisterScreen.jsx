@@ -30,7 +30,7 @@ const RegisterScreen = () => {
           password,
           mobileNumber: mobileNumber,
         }).unwrap();
-        console.log(res);
+        //console.log(res);
         dispatch(setCredentials({ ...res }));
         navigate("/profile");
       } catch (err) {

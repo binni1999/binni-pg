@@ -20,7 +20,7 @@ const ViewUserRentDetails = () => {
     refetch: pdfRefetch,
     isLoading: pdfLoading,
   } = useGetPdfPathsQuery(userId);
-  console.log("rentslipspdf", rentSlipsPdf);
+  //console.log("rentslipspdf", rentSlipsPdf);
   useEffect(() => {
     if (!pdfLoading && rentSlipsPdf) {
       setRentSlips(rentSlipsPdf);

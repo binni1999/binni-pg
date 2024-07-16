@@ -25,13 +25,13 @@ const UserEnquiryForm = () => {
   const [contact, setContact] = useState("");
   const [showEnquiry, setShowEnquiry] = useState(false);
   const { data, refetch, isLoading } = useGetUserEnquiriesQuery();
-  console.log(data);
+  //console.log(data);
   const { data: user } = useGetUserProfileQuery();
 
   const navigate = useNavigate();
   const [createEnquiryLoggedInUser] = useCreateEnquiryLoggedInUserMutation();
 
-  console.log(data);
+  //console.log(data);
 
   const [showMore, setShowMore] = useState(false);
 
@@ -48,7 +48,7 @@ const UserEnquiryForm = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(name, email, message, contact);
+    //console.log(name, email, message, contact);
     try {
       const res = await createEnquiryLoggedInUser({
         name,
@@ -56,7 +56,7 @@ const UserEnquiryForm = () => {
         contact,
         message,
       });
-      console.log(res);
+      //console.log(res);
       toast.success("Enquiry sent successfully");
       refetch();
       setMessage("");

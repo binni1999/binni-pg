@@ -42,7 +42,7 @@ const RegisterScreen = () => {
       }),
     });
     const result = await res.json();
-    console.log(result);
+    //console.log(result);
     toast.success("Registered Successfully");
     navigate("/login");
   };

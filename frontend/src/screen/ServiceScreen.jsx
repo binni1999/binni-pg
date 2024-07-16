@@ -8,7 +8,7 @@ import Meta from "../components/Meta";
 
 const ServiceScreen = () => {
   const { data: services, isLoading, error } = useGetServicesTypeQuery();
-  console.log(services);
+  //console.log(services);
   return (
     <>
       <Meta title={"Services"} />

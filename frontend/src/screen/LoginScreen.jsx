@@ -19,7 +19,7 @@ const LoginScreen = () => {
     e.preventDefault();
     try {
       const res = await login({ email, password }).unwrap();
-      console.log(res);
+      //console.log(res);
       dispatch(setCredentials({ ...res }));
       navigate("/profile");
     } catch (err) {

@@ -7,7 +7,7 @@ import Message from "./Message";
 import Meta from "./Meta";
 const Room = () => {
   const { data: rooms, isLoading, error } = useGetRoomsQuery();
-  console.log(rooms);
+  //console.log(rooms);
   return (
     <>
       <Meta title={"Rooms"} />

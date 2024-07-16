@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     try {
       const result = await forgotPassword({ email });
-      console.log(result);
+      //console.log(result);
       toast.success("Check your email for reset password link");
       setEmail("");
     } catch (error) {

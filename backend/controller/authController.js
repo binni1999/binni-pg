@@ -142,10 +142,10 @@ exports.createEnquiry = asyncHandler(async (req, res) => {
     if (req.user._id) {
         loginUser = await User.findById(req.user._id);
     }
-    console.log(req.body, req.user._id, loginUser);
+
 
     const enquiry = await Enquiry.create({ name, email, message, contact, user: loginUser })
-    console.log('created enquiry', enquiry);
+
 
     if (enquiry) {
         const result = await Enquiry.findById(enquiry._id).populate({
