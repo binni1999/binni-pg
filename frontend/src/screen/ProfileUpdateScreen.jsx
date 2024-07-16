@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import FormContainer from "../components/FormContainer";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import Meta from "../components/Meta";
+import { BASE_URL } from "../Constant";
 const RegisterScreen = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const RegisterScreen = () => {
       return;
     }
     const permanentAddress = `${address},${city},${state},${country}`;
-    const res = await fetch("http://localhost:8000/api/users", {
+    const res = await fetch(`${BASE_URL}/api/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

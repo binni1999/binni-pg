@@ -22,7 +22,7 @@ const RentPaidDetailsForUser = () => {
   } = useGetPdfPathsQuery(userInfo._id);
 
   useEffect(() => {
-    if (!pdfLoading) {
+    if (!pdfLoading && rentSlipsPdf) {
       setRentSlips(rentSlipsPdf);
       console.log("rent slips", rentSlips);
     }
