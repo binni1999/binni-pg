@@ -78,14 +78,16 @@ const ContactUs = () => {
           <Col md={6}>
             <Container>
               <Row className="my-5 ">
-                <h4 className="text-center mx-5">Enquiry Form</h4>
+                <h4 className="text-center mx-5 enquireyTitleClass">
+                  Enquiry Form
+                </h4>
                 <Row>
                   <FormContainer>
                     <Form onSubmit={submitHandler}>
                       <Form.Group
                         style={{ width: "25rem" }}
                         controlId="name"
-                        className="my-3"
+                        className="my-3 formFieldClass"
                       >
                         <Form.Control
                           type="text"
@@ -97,7 +99,7 @@ const ContactUs = () => {
                       <Form.Group
                         style={{ width: "25rem" }}
                         controlId="email"
-                        className="my-3"
+                        className="my-3 formFieldClass"
                       >
                         {/* <Form.Label>Email</Form.Label> */}
                         <Form.Control
@@ -110,7 +112,7 @@ const ContactUs = () => {
                       <Form.Group
                         style={{ width: "25rem" }}
                         controlId="contact"
-                        className="my-3"
+                        className="my-3 formFieldClass"
                       >
                         {/* <Form.Label>Contact Number</Form.Label> */}
                         <Form.Control
@@ -123,7 +125,7 @@ const ContactUs = () => {
                       <Form.Group
                         style={{ width: "25rem" }}
                         controlId="message"
-                        className="my-3"
+                        className="my-3 formFieldClass"
                       >
                         {/* <Form.Label>Contact Number</Form.Label> */}
                         <Form.Control

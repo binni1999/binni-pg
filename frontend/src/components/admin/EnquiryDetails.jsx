@@ -48,13 +48,15 @@ const EnquiryDetails = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <Container>
-          <h3 className="text-center">Enquiry Details #{enqId}</h3>
+          <h3 className="text-center enquiryHeader">
+            Enquiry Details #{enqId}
+          </h3>
           <Row>
             <Col>
               <>
                 <ListGroup variant="flush">
                   <ListGroup.Item>
-                    <h3>
+                    <h3 className="enquiryHeader">
                       Enquiry <FaUserClock />
                     </h3>
                     <p>
@@ -98,7 +100,7 @@ const EnquiryDetails = () => {
                     <Form onSubmit={submitHandler}>
                       <textarea
                         name="response"
-                        className="my-2"
+                        className="my-2 enquiryTextBox"
                         value={response}
                         onChange={(e) => setResponse(e.target.value)}
                         placeholder="enter your response"
@@ -116,7 +118,7 @@ const EnquiryDetails = () => {
                         }}
                       ></textarea>
                       <Button
-                        className="mx-1 my-1  span-button"
+                        className="mx-1 my-1  span-button enquiryDetailsButton"
                         style={{ color: "white", background: "#f73528" }}
                         onClick={toggleBox}
                       >

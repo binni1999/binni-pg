@@ -11,6 +11,7 @@ const ProductCarousel = () => {
       <Carousel.Item key={1}>
         <Link to={"/"}>
           <Image
+            className="productCarousel"
             style={{ height: "500px", width: "950px" }}
             src={image3}
             alt="wamson"
@@ -28,6 +29,7 @@ const ProductCarousel = () => {
       <Carousel.Item key={2}>
         <Link to={"/"}>
           <Image
+            className="productCarousel"
             style={{ height: "500px", width: "950px" }}
             src={image2}
             alt="wamson"
@@ -45,6 +47,7 @@ const ProductCarousel = () => {
       <Carousel.Item key={3}>
         <Link to={"/"}>
           <Image
+            className="productCarousel"
             style={{ height: "500px", width: "950px" }}
             src={image1}
             alt="wamson"
@@ -63,6 +66,7 @@ const ProductCarousel = () => {
       <Carousel.Item key={4}>
         <Link to={"/"}>
           <Image
+            className="productCarousel"
             style={{ height: "500px", width: "950px" }}
             src={image4}
             alt="wamson"

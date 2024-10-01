@@ -155,11 +155,13 @@ const UserProfileScreen = () => {
               </>
             )}
           </Col>
-          <Col>
-            <h2 className="mx-5 px-5" style={{ color: "green" }}>
-              Update Profile
-            </h2>
-          </Col>
+
+          <h2
+            className="mx-5 px-5 updateProfileTitle"
+            style={{ color: "green" }}
+          >
+            Update Profile
+          </h2>
         </Row>
         <Row className="mx-2">
           <Col md={6}>
@@ -267,7 +269,7 @@ const UserProfileScreen = () => {
               </Button>
             </Form>
           </Col>
-          <Col>
+          <Col className="changePasswordSection">
             <Row>
               <h4 className="mx-4 my-1 px-4" style={{ color: "green" }}>
                 Change Password?
@@ -275,16 +277,16 @@ const UserProfileScreen = () => {
 
               <Button
                 onClick={() => setShowPasswordForm(!showPasswordForm)}
-                className="luffy-button mx-5 my-1 px-2"
+                className="luffy-button mx-5 my-1 px-2 buttonChangePassword"
                 style={{ color: "white", width: "6rem" }}
               >
                 <b>{showPasswordForm ? "Close" : "Change"}</b>
               </Button>
             </Row>
             {showPasswordForm && (
-              <Row>
+              <Row className="changePasswordFormRow">
                 <Form
-                  className="mx-4 my-1 px-4"
+                  className="mx-4 my-1 px-4 changePasswordForm"
                   onSubmit={passwordSubmitHandler}
                 >
                   <Row>

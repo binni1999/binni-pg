@@ -19,7 +19,7 @@ const LoginScreen = () => {
     e.preventDefault();
     try {
       const res = await login({ email, password }).unwrap();
-      //console.log(res);
+      console.log(res);
       dispatch(setCredentials({ ...res }));
       navigate("/profile");
     } catch (err) {
@@ -28,9 +28,9 @@ const LoginScreen = () => {
   };
 
   return (
-    <div>
+    <div className="LoginScreen">
       <Meta title="Login Page" />
-      <FormContainer className="my-3">
+      <FormContainer className="my-3 formContainer">
         <strong>
           <h1>Sign In</h1>
         </strong>

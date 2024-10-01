@@ -74,7 +74,7 @@ const ViewUserRentDetails = () => {
             <Col>
               <button
                 style={{ width: "14rem", color: "white" }}
-                className="luffy-button"
+                className="luffy-button viewRentDetails"
               >
                 <b>Name : {user.name}</b>
               </button>
@@ -82,7 +82,7 @@ const ViewUserRentDetails = () => {
             <Col>
               <button
                 style={{ width: "16rem", color: "white" }}
-                className="luffy-button"
+                className="luffy-button viewRentDetails"
               >
                 <strong>Email: {user.email}</strong>
               </button>
@@ -90,7 +90,7 @@ const ViewUserRentDetails = () => {
             <Col>
               <button
                 style={{ width: "14rem", color: "white" }}
-                className="luffy-button"
+                className="luffy-button viewRentDetails"
               >
                 <strong>Contact: {user.mobileNumber}</strong>
               </button>

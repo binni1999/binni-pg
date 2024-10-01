@@ -57,7 +57,7 @@ const PayRent = () => {
   }, [rentDetails, isLoading, rentAmount]);
 
   useEffect(() => {
-    if (!pdfLoading) {
+    if (!pdfLoading && rentSlipsPdf) {
       setRentSlips(rentSlipsPdf);
       //console.log("rent slips", rentSlips);
     }
@@ -158,7 +158,7 @@ const PayRent = () => {
   };
 
   return (
-    <Container>
+    <Container className="my-5">
       <Meta title={"Pay Rent"} />
       <h1 className="text-center">Pay Rent</h1>
 

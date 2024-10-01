@@ -67,28 +67,17 @@ const UserEnquiryForm = () => {
     }
   };
   return (
-    <Container>
+    <Container className="enquiryContainer my-5">
       <Meta title={"Enquiry"} />
-      <h2 className="text-center">Post an Enquiry</h2>
-      <p className="mx-5">
-        <strong>Previous Enquiries?</strong>
-      </p>
-      <Button
-        variant="outline-success"
-        className="mx-5"
-        style={{ width: "6rem" }}
-        onClick={(e) => setShowEnquiry(!showEnquiry)}
-      >
-        {showEnquiry ? "Hide" : "Show"}
-      </Button>
+      <h2 className="text-center">Post An Enquiry</h2>
       <Row>
-        <Col className="my-4 mx-5" md={4}>
+        <Col className="my-1 mx-5 enquiryBoxClass" md={3}>
           <h3 className="mb-2">Post An Enquiry</h3>
           <Form onSubmit={submitHandler}>
             <Form.Group
               style={{ width: "25rem" }}
               controlId="name"
-              className="my-3"
+              className="my-3 formFieldClass"
             >
               <Form.Control
                 type="text"
@@ -100,7 +89,7 @@ const UserEnquiryForm = () => {
             <Form.Group
               style={{ width: "25rem" }}
               controlId="email"
-              className="my-3"
+              className="my-3 formFieldClass"
             >
               {/* <Form.Label>Email</Form.Label> */}
               <Form.Control
@@ -113,7 +102,7 @@ const UserEnquiryForm = () => {
             <Form.Group
               style={{ width: "25rem" }}
               controlId="contact"
-              className="my-3"
+              className="my-3 formFieldClass"
             >
               {/* <Form.Label>Contact Number</Form.Label> */}
               <Form.Control
@@ -126,7 +115,7 @@ const UserEnquiryForm = () => {
             <Form.Group
               style={{ width: "25rem" }}
               controlId="message"
-              className="my-3"
+              className="my-3 formFieldClass"
             >
               {/* <Form.Label>Contact Number</Form.Label> */}
               <Form.Control
@@ -152,59 +141,73 @@ const UserEnquiryForm = () => {
             </Button>
           </Form>
         </Col>
-        <Col className="mx-2">
-          {data?.message === "No Query" && showEnquiry && (
-            <Message variant="danger">There is no query asked by you!</Message>
-          )}
-          {showEnquiry &&
-            !isLoading &&
-            !data?.message?.includes("No Query") && (
-              <Row>
-                {data.map((enquiry) => (
-                  <Col md={6}>
-                    <Card className="my-2 mx-1" style={{ width: "100%" }}>
-                      <CardBody>
-                        <p>
-                          {" "}
-                          <b>Name</b>: &nbsp;&nbsp; {enquiry.user.name}
-                        </p>
-                        <p>
-                          <b>Posted On</b>:&nbsp;&nbsp;
-                          {enquiry.createdAt.split("T")[0]}
-                        </p>
-                        <p style={{ color: "#4f4f4d" }}>
-                          <span style={{ color: "Blue" }}>
-                            <b>Query</b>:&nbsp;&nbsp;
-                          </span>
-                          {enquiry.message}
-                        </p>
-                        <p style={{ color: "green", background: "#D1F2EB" }}>
-                          <span style={{ color: "red" }}>
-                            {" "}
-                            <b>Response</b>{" "}
-                          </span>{" "}
-                          : &nbsp;&nbsp;
-                          {enquiry?.response
-                            ? showMore
-                              ? enquiry?.response
-                              : `${enquiry?.response.substring(0, 100)}... `
-                            : "No Response Yet"}
-                          {enquiry?.response &&
-                            enquiry?.response.length > 100 && (
-                              <span
-                                onClick={handleReadMore}
-                                style={{ cursor: "pointer", color: "blue" }}
-                              >
-                                {showMore ? "Read Less" : "Read More"}
-                              </span>
-                            )}
-                        </p>
-                      </CardBody>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
+        <Col md={1}></Col>
+        <Col className="prevEnquiries">
+          <p className="mx-2">
+            <strong>Previous Enquiries?</strong>
+          </p>
+          <Button
+            variant="outline-success"
+            className="mx-2 enquiryButton"
+            style={{ width: "6rem" }}
+            onClick={(e) => setShowEnquiry(!showEnquiry)}
+          >
+            {showEnquiry ? "Hide" : "Show"}
+          </Button>
+          <Col className="mx-1 showQuery">
+            {data?.message === "No Query" && showEnquiry && (
+              <Message variant="danger">
+                There is no query asked by you!
+              </Message>
             )}
+            {showEnquiry &&
+              !isLoading &&
+              !data?.message?.includes("No Query") && (
+                <Row>
+                  {data.map((enquiry) => (
+                    <Col md={6}>
+                      <Card className="my-2 mx-1" style={{ width: "100%" }}>
+                        <CardBody className="cardBodyEnquiry">
+                          <p>
+                            <b>Name</b>: &nbsp;&nbsp; {enquiry.user.name}
+                          </p>
+                          <p>
+                            <b>Posted On</b>:&nbsp;&nbsp;
+                            {enquiry.createdAt.split("T")[0]}
+                          </p>
+                          <p style={{ color: "#4f4f4d" }}>
+                            <span style={{ color: "Blue" }}>
+                              <b>Query</b>:&nbsp;&nbsp;
+                            </span>
+                            {enquiry.message}
+                          </p>
+                          <p style={{ color: "green", background: "#D1F2EB" }}>
+                            <span style={{ color: "red" }}>
+                              <b>Response</b>
+                            </span>
+                            : &nbsp;&nbsp;
+                            {enquiry?.response
+                              ? showMore
+                                ? enquiry?.response
+                                : `${enquiry?.response.substring(0, 100)}... `
+                              : "No Response Yet"}
+                            {enquiry?.response &&
+                              enquiry?.response.length > 100 && (
+                                <span
+                                  onClick={handleReadMore}
+                                  style={{ cursor: "pointer", color: "blue" }}
+                                >
+                                  {showMore ? "Read Less" : "Read More"}
+                                </span>
+                              )}
+                          </p>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              )}
+          </Col>
         </Col>
       </Row>
       ;

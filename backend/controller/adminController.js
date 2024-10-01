@@ -14,8 +14,6 @@ exports.getAllUsers = asyncHandler(async (req, res) => {
             roomNumber: isNaN(parseInt(req.query.keyword, 10)) ? undefined : parseInt(req.query.keyword, 10)
         }]
     } : {};
-
-
     const count = await User.countDocuments({ ...keyword, userType: 'Tenet' })
     const users = await User.find({ ...keyword, userType: 'Tenet' }).select('-password ').limit(pageSize).skip(pageSize * (page - 1))
     if (users) {

@@ -5,14 +5,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="mt-4">
+    <footer className="mt-4 footerClass">
       <hr />
       <Container>
         <Row>
           <Col md={6}>
-            {/* <p className="text-center">
-              <strong style={{ color: "green" }}>Useful Links</strong>
-            </p> */}
             <strong style={{ color: "green" }}>
               <b>Useful Links</b>
             </strong>{" "}
@@ -64,7 +61,6 @@ const Footer = () => {
           </Col>
           <Col md={2}>
             <strong style={{ color: "green" }}>
-              
               <b>Connect</b>
             </strong>
             <br />

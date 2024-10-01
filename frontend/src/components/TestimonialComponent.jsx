@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 const TestimonialComponent = ({ testimonial }) => {
   return (
     <Card
-      className="my-4 py-2 mx-2"
+      className="my-4 py-2 mx-2 testimonialScreen"
       style={{
         width: "23rem",
         height: "13rem",
@@ -12,16 +12,20 @@ const TestimonialComponent = ({ testimonial }) => {
         background: "#3b5057",
       }}
     >
-      <Card.Body>
-        <Card.Title className="text-center text-white">
+      <Card.Body className="testimonialBody">
+        <Card.Title className="text-center text-white testimonialTitle">
           {testimonial?.title}
         </Card.Title>
 
-        <Card.Text style={{ color: "white", fontSize: "14px" }}>
+        <Card.Text
+          className="testimonialContent"
+          style={{ color: "white", fontSize: "14px" }}
+        >
           {testimonial?.content}
         </Card.Text>
         <Card.Text
           as={"h6"}
+          className="testimonialText"
           style={{ textAlign: "right", color: "white", fontSize: "14px" }}
         >
           - {testimonial?.user.name}

@@ -53,7 +53,7 @@ const UserTestimony = () => {
   return (
     <>
       <Container
-        className="my-3"
+        className="my-3 userTestimony"
         fluid
         style={{
           backgroundImage: `url(${hall})`,

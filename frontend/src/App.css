@@ -1,0 +1,213 @@
+.aboutImage {
+  border-radius: 20px;
+  width: 100%;
+  height: 75%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* //about section */
+  .aboutSection {
+    display: block;
+
+    margin: 0;
+  }
+  .aboutCol {
+    margin-top: 0px;
+
+    padding: 0;
+  }
+  .aboutTitle {
+    padding: 3px !important;
+    display: block;
+    margin: 2px !important;
+    margin-left: 20px !important;
+
+    margin-right: 5px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .aboutTitle p {
+    font-size: 14px !important;
+  }
+  .aboutUs {
+    margin-top: 1px;
+  }
+  .aboutImage {
+    display: flex;
+  }
+  .aboutSection h1 {
+    font-size: 1.5rem;
+  }
+  .footerClass {
+    margin-top: 1px !important;
+    height: 630px;
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 4px;
+    background-color: #fcfcfc; /* Adjust background color */
+  }
+  .footerClass p {
+    font-size: 13px;
+  }
+
+  .testimonialScreen {
+    width: 22rem !important;
+    height: 8rem !important;
+    align-items: center !important;
+    margin-left: 25px !important;
+    margin-top: 1px !important;
+    margin-bottom: 3px !important;
+    border-radius: 2rem !important;
+  }
+  .testimonialTitle {
+    margin-top: 3px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  .testimonialContent {
+    font-size: 12px !important;
+  }
+
+  .testimonialText {
+    display: block !important;
+    font-size: 8px !important;
+  }
+  .testimonialBody {
+    margin: 2px !important;
+    padding: 3px !important;
+
+    margin-bottom: 0 !important;
+  }
+
+  /* //product carasoul */
+  .productCarousel {
+    height: 350px !important;
+  }
+
+  .LoginScreen,
+  .signupScreen {
+    margin-top: 4rem;
+  }
+
+  .signupMainClass {
+    /* padding-top: 1px !important;
+    padding-bottom: 1px !important; */
+    display: inline;
+    padding: 3px !important;
+    margin: 2px !important;
+  }
+  .formFieldClass {
+    width: 23rem !important;
+  }
+  .enquireyTitleClass {
+    margin-left: 10px !important;
+  }
+  .userTestimony {
+    height: 45vh !important;
+  }
+  .enquiryBoxClass {
+    margin: 20px 6px 3px 6px !important;
+  }
+  .enquiryContainer p {
+    margin-left: 6px !important;
+  }
+  .enquiryButton {
+    margin-left: 6px !important;
+  }
+  .showQuery {
+    margin-left: 1px !important;
+  }
+  .prevEnquiries {
+    margin-top: 20px !important;
+  }
+  .cardBodyEnquiry p {
+    font-size: 14px;
+  }
+
+  .rentButtons button {
+    margin: 3px !important;
+    height: 2rem;
+    font-size: 12px;
+    width: 18rem !important;
+    margin-left: 50px !important;
+  }
+  .updateProfileTitle {
+    font-size: 22px;
+  }
+  .changePasswordSection h4 {
+    margin: 5px !important;
+    padding: 5px !important;
+  }
+  .buttonChangePassword {
+    margin-left: 10px !important;
+  }
+  .changePasswordFormRow {
+    padding-left: 1px !important;
+  }
+  .changePasswordForm {
+    margin-left: 1px !important;
+  }
+
+  .rentDetails {
+    font-size: 12px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .rentDetailsHide {
+    display: none;
+  }
+
+  .rentDetailsButton {
+    padding: 3px !important;
+  }
+  .paginationClass {
+    display: inline-block;
+  }
+  .pagination-sm-custom .page-item .page-link {
+    padding: 5px 10px; /* Reduce the padding */
+    font-size: 12px; /* Reduce the font size */
+  }
+
+  .pagination-sm-custom .page-item.active .page-link {
+    background-color: #343a40; /* Adjust active color */
+    border-color: #343a40; /* Adjust active border color */
+    color: white; /* Active text color */
+  }
+
+  .usertrHeading {
+    font-size: 14px !important;
+  }
+  .userDetailsButton {
+    padding: 3px !important;
+    font-size: 12px !important;
+  }
+  .viewRentDetails {
+    padding: 5px !important;
+    margin: 3px !important;
+    font-size: 14px;
+    width: 16rem !important;
+  }
+  .adminEnquiries {
+    font-size: 12px;
+  }
+  .enquiryHeader {
+    font-size: 20px;
+  }
+  .enquiryTextBox {
+    width: 340px !important;
+    margin-left: 20px;
+    height: 200px !important;
+  }
+  .enquiryDetailsButton {
+    margin-left: 20px !important;
+  }
+  .searchBoxClass {
+    width: 300px !important;
+    height: 40px !important;
+    margin-left: 22px;
+  }
+}

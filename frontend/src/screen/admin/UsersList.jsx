@@ -16,7 +16,7 @@ const UsersList = () => {
     pageNumber,
     keyword,
   });
-  //console.log(data);
+  console.log(data);
   return (
     <>
       <Meta title={"Users"} />
@@ -72,7 +72,7 @@ const UsersList = () => {
           className="table-sm"
         >
           <thead>
-            <tr>
+            <tr className="usertrHeading">
               <th>ID</th>
               <th>Name</th>
               <th>Email</th>
@@ -84,7 +84,7 @@ const UsersList = () => {
           </thead>
           <tbody>
             {data.users.map((user) => (
-              <tr key={user._id}>
+              <tr key={user._id} className="usertrHeading">
                 <td>{user._id}</td>
 
                 <td>{user.name}</td>
@@ -106,18 +106,21 @@ const UsersList = () => {
                     <FaTimes style={{ color: "red" }} />
                   )}
                 </td>
-                <td>
+                <td className="">
                   {user.userType === "Admin" ? (
                     <Button
                       disabled
-                      className="py-1"
+                      className="py-1 userDetailsButton"
                       style={{ height: "2.5rem" }}
                     >
                       Notify
                     </Button>
                   ) : (
                     <LinkContainer to={`/admin/rent-details/${user._id}/edit`}>
-                      <Button className="py-1" style={{ height: "2.5rem" }}>
+                      <Button
+                        className="py-1 userDetailsButton"
+                        style={{ height: "2.5rem" }}
+                      >
                         Notify
                       </Button>
                     </LinkContainer>
@@ -125,11 +128,14 @@ const UsersList = () => {
                 </td>
                 <td>
                   <LinkContainer to={`/admin/user/${user._id}/edit`}>
-                    <Button variant="light" className="btn-sm">
+                    <Button
+                      variant="light"
+                      className="btn-sm userDetailsButton"
+                    >
                       <FaEdit style={{ color: "green" }} />
                     </Button>
                   </LinkContainer>
-                  <Button variant="danger" className="btn-sm">
+                  <Button variant="danger" className="btn-sm userDetailsButton">
                     <FaTrash style={{ color: "white" }} />
                   </Button>
                 </td>
@@ -142,7 +148,7 @@ const UsersList = () => {
       <Row className="my-4">
         <Col md={5}></Col>
         <Col md={3} className="text-center">
-          <p className="text-center">
+          <p className="text-center paginationClass">
             <Paginate pages={data?.pages} page={data?.page} path={"users"} />
           </p>
         </Col>

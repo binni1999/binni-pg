@@ -66,19 +66,21 @@ const RentDetails = () => {
       )}
       <Container className="my-3">
         <Row>
-          <Col md={2} className="text-center my-2">
-            <strong style={{ color: "green" }}>&nbsp;&nbsp;Room No </strong>
+          <Col className="text-center my-2 rentDetails">
+            <strong style={{ color: "green", marginLeft: "15px" }}>
+              Room No
+            </strong>
           </Col>
-          <Col className="text-center  my-2">
+          <Col className="text-center  my-2  rentDetails">
             <strong style={{ color: "green" }}>Name</strong>
           </Col>
-          <Col className="text-center  my-2">
+          <Col className="text-center  my-2 rentDetails">
             <strong style={{ color: "green" }}>Contact</strong>
           </Col>
-          <Col className="text-center  my-2">
+          <Col className="text-center  my-2 rentDetails rentDetailsHide">
             <strong style={{ color: "green" }}>Mail Id</strong>
           </Col>
-          <Col className="text-center  my-2 mx-1">
+          <Col className="text-center  my-2 mx-1 rentDetails">
             <strong style={{ color: "green" }}>Rent Details</strong>
           </Col>
         </Row>
@@ -90,22 +92,22 @@ const RentDetails = () => {
         ) : (
           <>
             {users.users.map((user) => (
-              <Row className="my-3 text-center enquiry-row" key={user._id}>
+              <Row className="my-2 text-center enquiry-row" key={user._id}>
                 {user.userType !== "Admin" && (
                   <>
-                    <Col md={2} className="py-2">
-                      {user.roomNumber}
-                    </Col>
-                    <Col>{user.name}</Col>
-                    <Col>{user.mobileNumber}</Col>
-                    <Col>{user.email}</Col>
+                    <Col className="rentDetails">{user.roomNumber}</Col>
+                    <Col className="rentDetails">{user.name}</Col>
+                    <Col className="rentDetails">{user.mobileNumber}</Col>
+                    <Col className="rentDetailsHide">{user.email}</Col>
 
-                    <Col>
+                    <Col className="rentDetails">
                       <LinkContainer
                         className="text-center"
                         to={`/admin/rent-details/${user._id}/view`}
                       >
-                        <span className="span-button">Details</span>
+                        <span className="span-button rentDetailsButton">
+                          Details
+                        </span>
                       </LinkContainer>
                     </Col>
                   </>
@@ -116,8 +118,8 @@ const RentDetails = () => {
         )}
         <Row className="my-4">
           <Col md={5}></Col>
-          <Col md={3} className="text-center">
-            <p className="text-center">
+          <Col md={3} className="text-center ">
+            <p className="text-center paginationClass">
               <Paginate
                 pages={users?.pages}
                 page={users?.page}

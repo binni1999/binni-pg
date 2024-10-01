@@ -17,7 +17,7 @@ const SearchBox = ({ searchType, holder, link }) => {
   };
   const placeholder = `Search ${holder}`;
   return (
-    <Form onSubmit={submitHandler} className="d-flex">
+    <Form onSubmit={submitHandler} className="d-flex searchBoxClass">
       <Form.Control
         type="text"
         name="q"

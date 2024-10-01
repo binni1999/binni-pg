@@ -59,7 +59,7 @@ const Enquiries = () => {
       )}
 
       <Container>
-        <Row>
+        <Row className="adminEnquiries">
           <Col className="text-center">
             <strong style={{ color: "green" }}> Date</strong>
           </Col>
@@ -84,7 +84,10 @@ const Enquiries = () => {
         ) : (
           <>
             {data.enquiry.map((enquiry) => (
-              <Row className="my-3 text-center enquiry-row" key={enquiry._id}>
+              <Row
+                className="my-3 text-center enquiry-row adminEnquiries"
+                key={enquiry._id}
+              >
                 <Col>{enquiry.createdAt.substring(0, 10)}</Col>
                 <Col>{enquiry.name}</Col>
                 <Col>

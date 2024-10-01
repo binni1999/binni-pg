@@ -58,10 +58,10 @@ const RentPaidDetailsForUser = () => {
   };
 
   return (
-    <Container>
+    <Container className="my-5">
       <Meta title={"Rent Details"} />
       <h2 className="text-center my-2">View Rent Details</h2>
-      <Row className="my-4">
+      <Row className="my-4 rentButtons">
         <Col>
           <button
             style={{ width: "14rem", color: "white" }}
